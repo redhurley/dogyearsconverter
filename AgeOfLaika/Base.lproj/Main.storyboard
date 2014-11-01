@@ -25,12 +25,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AgeOfLaika.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-2d-gaG">
-                                <rect key="frame" x="133" y="194" width="334" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="334" id="3cN-XF-Kgs"/>
-                                </constraints>
-                            </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3A-90-HR2">
                                 <rect key="frame" x="178" y="89" width="245" height="21"/>
                                 <constraints>
@@ -56,19 +50,44 @@
                                     <action selector="convertToDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHW-s0-hbt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF5-A4-mWY">
+                                <rect key="frame" x="148" y="179" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="63U-v6-jH4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Convert to Real Dog Years">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertToRealDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JX7-P0-29b"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AgeOfLaika.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-2d-gaG">
+                                <rect key="frame" x="133" y="230" width="334" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="3cN-XF-Kgs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iEm-77-nP4" firstAttribute="leading" secondItem="1Op-b6-qUF" secondAttribute="leading" id="1q9-i1-UW6"/>
+                            <constraint firstItem="wF5-A4-mWY" firstAttribute="top" secondItem="iEm-77-nP4" secondAttribute="bottom" constant="20" id="9Gd-za-kLi"/>
                             <constraint firstItem="iEm-77-nP4" firstAttribute="centerX" secondItem="X0O-2d-gaG" secondAttribute="centerX" id="Qt0-l9-ZSc"/>
                             <constraint firstItem="1Op-b6-qUF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="XYJ-gy-PPA"/>
                             <constraint firstItem="iEm-77-nP4" firstAttribute="top" secondItem="L3A-90-HR2" secondAttribute="bottom" constant="19" id="YPF-qq-eGD"/>
                             <constraint firstItem="1Op-b6-qUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahq-vL-MtP"/>
+                            <constraint firstItem="X0O-2d-gaG" firstAttribute="top" secondItem="wF5-A4-mWY" secondAttribute="bottom" constant="21" id="fLY-K5-n7p"/>
                             <constraint firstItem="1Op-b6-qUF" firstAttribute="trailing" secondItem="iEm-77-nP4" secondAttribute="trailing" id="kUK-fc-Pda"/>
                             <constraint firstItem="L3A-90-HR2" firstAttribute="top" secondItem="1Op-b6-qUF" secondAttribute="bottom" constant="19" id="lcn-uc-E0G"/>
+                            <constraint firstItem="wF5-A4-mWY" firstAttribute="leading" secondItem="iEm-77-nP4" secondAttribute="leading" id="np4-PZ-vuq"/>
                             <constraint firstItem="L3A-90-HR2" firstAttribute="centerX" secondItem="1Op-b6-qUF" secondAttribute="centerX" id="nqO-Hg-Sl4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X0O-2d-gaG" secondAttribute="bottom" constant="226" id="nqz-qk-Enc"/>
                             <constraint firstItem="X0O-2d-gaG" firstAttribute="top" secondItem="iEm-77-nP4" secondAttribute="bottom" constant="35" id="oJ2-cm-a36"/>
+                            <constraint firstItem="wF5-A4-mWY" firstAttribute="trailing" secondItem="iEm-77-nP4" secondAttribute="trailing" id="s1G-ON-0rc"/>
                         </constraints>
                     </view>
                     <connections>
