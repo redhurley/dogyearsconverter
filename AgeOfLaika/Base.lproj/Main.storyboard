@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AgeOfLaika" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Human Years Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Op-b6-qUF">
+                                <rect key="frame" x="148" y="40" width="304" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4SI-Mo-Jv0"/>
+                                    <constraint firstAttribute="width" constant="304" id="FV4-cc-BUP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AgeOfLaika.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-2d-gaG">
+                                <rect key="frame" x="133" y="194" width="334" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="3cN-XF-Kgs"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3A-90-HR2">
+                                <rect key="frame" x="178" y="89" width="245" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1o3-Jm-uuR"/>
+                                    <constraint firstAttribute="width" constant="245" id="l2E-e3-V0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEm-77-nP4">
+                                <rect key="frame" x="148" y="129" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sI0-mO-cxY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Convert to Dog Years">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertToDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHW-s0-hbt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iEm-77-nP4" firstAttribute="leading" secondItem="1Op-b6-qUF" secondAttribute="leading" id="1q9-i1-UW6"/>
+                            <constraint firstItem="iEm-77-nP4" firstAttribute="centerX" secondItem="X0O-2d-gaG" secondAttribute="centerX" id="Qt0-l9-ZSc"/>
+                            <constraint firstItem="1Op-b6-qUF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="XYJ-gy-PPA"/>
+                            <constraint firstItem="iEm-77-nP4" firstAttribute="top" secondItem="L3A-90-HR2" secondAttribute="bottom" constant="19" id="YPF-qq-eGD"/>
+                            <constraint firstItem="1Op-b6-qUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahq-vL-MtP"/>
+                            <constraint firstItem="1Op-b6-qUF" firstAttribute="trailing" secondItem="iEm-77-nP4" secondAttribute="trailing" id="kUK-fc-Pda"/>
+                            <constraint firstItem="L3A-90-HR2" firstAttribute="top" secondItem="1Op-b6-qUF" secondAttribute="bottom" constant="19" id="lcn-uc-E0G"/>
+                            <constraint firstItem="L3A-90-HR2" firstAttribute="centerX" secondItem="1Op-b6-qUF" secondAttribute="centerX" id="nqO-Hg-Sl4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X0O-2d-gaG" secondAttribute="bottom" constant="226" id="nqz-qk-Enc"/>
+                            <constraint firstItem="X0O-2d-gaG" firstAttribute="top" secondItem="iEm-77-nP4" secondAttribute="bottom" constant="35" id="oJ2-cm-a36"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dogYearsLabel" destination="L3A-90-HR2" id="tuW-He-bib"/>
+                        <outlet property="enterHumanYearsTextField" destination="1Op-b6-qUF" id="g2z-AJ-CKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="AgeOfLaika.jpg" width="1057" height="654"/>
+    </resources>
 </document>
